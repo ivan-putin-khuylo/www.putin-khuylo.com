@@ -1,0 +1,79 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	background: #181715;
+	color: #F0EAD6;
+	display: block;
+	font-family: Fredoka, sans-serif;
+	font-size: 125%;
+	max-width: 960px;
+	margin: auto;
+	padding: 20px 10px;
+}
+
+section {
+	padding: 0 10px;
+}
+
+h1, 
+h2 {
+	margin: 20px 0;
+}
+
+.hero {
+	border-top: 5px solid #005BBB;
+	border-bottom: 5px solid #FFD500;
+	text-align: center;
+}
+
+.description {
+}
+
+.ctas {
+	text-align: center;
+}
+.cta {
+	background: #F0EAD6;
+	border-top: 2px solid #181715;
+	border-bottom: 2px solid #181715;
+	border-radius: 5px;
+	color: #181715;
+	display: inline-block;
+	margin: 0 10px;
+	min-width: 150px;
+	padding:  10px;
+	text-decoration: none;
+}
+.cta:hover, .cta:active {
+	border-top-color: #005BBB;
+	border-bottom-color: #FFD500;
+}
+a {
+	color: inherit;
+}
