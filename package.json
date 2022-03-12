@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  },
+  "license": "MIT",
+  "name": "www.putin-khuylo.com",
+  "description": "Putin-Khuylo is a WordPress plugin that allows any WordPress administrator to show solidarity for Ukraine and their stand against Vladimir Putin's illegal invasion of their sovereign nation.",
+  "version": "1.0.0",
+  "scripts": {
+    "backup": "scripts/backup.sh",
+    "start": "scripts/start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-putin:ivan-putin-khuylo/www.putin-khuylo.com.git"
+  },
+  "author": "Ivan Putin-Khuylo <ivan.putin-khuylo@protonmail.com>"
+}

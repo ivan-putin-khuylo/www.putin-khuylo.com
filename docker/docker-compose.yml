@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: db.dev.${ORG}
+    environment:
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - $PWD/docker/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
+
+  www:
+    user: "1000:1000"
+    image: www.${ORG}:latest
+    build:
+      context: .
+      dockerfile: wordpress.dockerfile
+    restart: always
+    container_name: www.dev.${ORG}
+    environment:
+      - WORDPRESS_DB_HOST=${DB_HOST}
+      - WORDPRESS_DB_USER=${DB_USER}
+      - WORDPRESS_DB_PASSWORD=${DB_PASSWORD}
+      - WORDPRESS_DB_NAME=${DB_NAME}
+      - WP_DEBUG=${WP_DEBUG}
+      - XDEBUG_CONFIG=remote_host=host.docker.internal remote_port=9000 remote_enable=1
+    volumes:
+      - ${WP_PATH}:/var/www/html/wp-content:rw
+    ports:
+      - "${WWW_PORT}:80"
